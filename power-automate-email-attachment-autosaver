@@ -1,1 +1,87 @@
-gfgsfg
+# Power Automate – Finance Email Attachment Auto-Saver
+
+## Project Overview
+
+This project demonstrates an automated cloud flow built with Microsoft Power Automate to automatically save qualifying email attachments into a controlled OneDrive for Business or SharePoint folder.
+
+The project is based on a Finance / Order-to-Cash (O2C) business scenario where operational reports and supporting documents are received through email.
+
+## Business Problem
+
+The manual process of monitoring emails, downloading attachments, renaming files, and saving them to a team folder can result in:
+
+- Missed attachments
+- Duplicate downloads
+- Inconsistent file naming
+- Accidental saving of signature or logo images
+- Limited processing traceability
+
+## Objective
+
+Build an automated cloud flow that:
+
+1. Monitors incoming emails.
+2. Identifies qualifying emails.
+3. Evaluates attachments against defined business rules.
+4. Ignores non-business attachments such as signatures or images.
+5. Saves valid attachments to the designated business location.
+6. Uses a collision-resistant file naming approach.
+7. Provides visible failure handling through run history and a dedicated error path.
+
+## Tools & Technologies
+
+- Microsoft Power Automate
+- Office 365 Outlook
+- OneDrive for Business
+- SharePoint
+
+## Flow Type
+
+Automated Cloud Flow
+
+## High-Level Process
+
+Email Received
+→ Identify Qualifying Email
+→ Check Attachments
+→ Validate Attachment
+→ Generate Safe File Name
+→ Save Attachment
+→ Log / Handle Errors
+
+## Business Rules
+
+The flow should process only attachments that satisfy the configured email and attachment criteria.
+
+The flow should avoid saving:
+
+- Email signature images
+- Embedded images
+- Unsupported attachments
+- Duplicate files where applicable
+
+## File Naming
+
+Saved files should use a controlled naming convention to reduce the possibility of accidental overwriting or duplicate file names.
+
+## Error Handling
+
+The automation should provide clear failure visibility through:
+
+- Power Automate run history
+- Error handling logic
+- Dedicated error path where applicable
+
+## Expected Outcome
+
+The automation reduces manual email monitoring and attachment handling, improves consistency, reduces duplicate or incorrect file storage, and provides better process traceability.
+
+## Project Status
+
+Initial project documentation created.
+
+Implementation and testing details will be added as the Power Automate flow is developed.
+
+## Author
+
+Mohan
